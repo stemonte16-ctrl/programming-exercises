@@ -1,0 +1,23 @@
+HISTORIAL DE CAMBIOS DEL REPOSITORIO
+
+--------------------------------------------------
+
+Commit: 8d285df
+Mensaje: Commit inicial
+
+¿Qué cambió?
+- Se creó el repositorio y se agregó el archivo README.md.
+
+¿Por qué se hizo ese cambio?
+- Para inicializar el repositorio y comenzar el control de versiones del proyecto.
+
+--------------------------------------------------
+
+Commit: d93c0a7
+Mensaje: Agregar ejercicios desde IT Essentials hasta Python Básico
+
+¿Qué cambió?
+- Se agregaron los ejercicios correspondientes a los módulos IT Essentials, Lógica de Programación y Python Básico.
+
+¿Por qué se hizo ese cambio?
+- Para almacenar y organizar en el repositorio todos los ejercicios desarrollados durante el curso.
