@@ -3,9 +3,9 @@ import csv
 student_list = []
 
 
-def export_students(file_path):
+def export_students(file_path, students):
     # Exports all students from the list to a CSV file.
-    if len(student_list) == 0:
+    if len(students) == 0:
         print("No hay estudiantes registrados para exportar.")
         return
 
@@ -15,26 +15,25 @@ def export_students(file_path):
         "spanish_grade",
         "english_grade",
         "social_grade",
-        "science_grade",
-        "math_grade"
+        "science_grade"
     ]
 
     with open(file_path, "w", newline="", encoding="utf-8") as file:
         writer = csv.DictWriter(file, fieldnames=fieldnames)
 
         writer.writeheader()
-        writer.writerows(student_list)
+        writer.writerows(students)
 
     print("Estudiantes exportados correctamente.")
 
 
-def import_students(file_path):
+def import_students(file_path, students):
     # Imports students from a CSV file into the student list.
     try:
         with open(file_path, "r", newline="", encoding="utf-8") as file:
             reader = csv.DictReader(file)
 
-            student_list.clear()
+            students.clear()
 
             for row in reader:
                 student = {
@@ -43,11 +42,10 @@ def import_students(file_path):
                     "spanish_grade": float(row["spanish_grade"]),
                     "english_grade": float(row["english_grade"]),
                     "social_grade": float(row["social_grade"]),
-                    "science_grade": float(row["science_grade"]),
-                    "math_grade": float(row["math_grade"])
+                    "science_grade": float(row["science_grade"])
                 }
 
-                student_list.append(student)
+                students.append(student)
 
         print("Estudiantes importados correctamente.")
 

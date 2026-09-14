@@ -50,10 +50,10 @@ def show_menu():
             delete_student(student_list)
             
         elif option == 8:
-            export_students("students.csv")
+            export_students("students.csv", student_list)
             
         elif option == 9:
-            import_students("students.csv")
+            import_students("students.csv", student_list)
         
         elif option == 10:
             print("¡Gracias por usar nuestro sitema de estudiantes!")

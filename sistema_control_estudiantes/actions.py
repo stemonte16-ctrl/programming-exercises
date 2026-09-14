@@ -86,18 +86,7 @@ def add_students(students):
             except ValueError:
                 print("Valor equivocado")
 
-        # Validate Mathematics grade
-        while True:
-            try:
-                math_grade = float(input("Ingrese la nota de Matemáticas: "))
 
-                if math_grade >= 0 and math_grade <= 100:
-                    break
-                else:
-                    print("Nota inválida\nIntente otra vez!!")
-
-            except ValueError:
-                print("Valor equivocado")
 
         student = {
             "name": name,
@@ -105,8 +94,7 @@ def add_students(students):
             "spanish_grade": spanish_grade,
             "english_grade": english_grade,
             "social_grade": social_grade,
-            "science_grade": science_grade,
-            "math_grade": math_grade
+            "science_grade": science_grade
         }
 
         students.append(student)
@@ -133,18 +121,18 @@ def add_students(students):
 def show_students(students):
     for student in students:
         print("=============================================")
-        print(f"Nombre : {student["name"]}")
-        print(f"Sección : {student["section"]}")
-        print(f"Nota de español : {student["spanish_grade"]}")
-        print(f"Nota de inglés : {student["english_grade"]}")
-        print(f"Nota de sociales : {student["social_grade"]}")
-        print(f"Nota de ciencias : {student["science_grade"]}")
-        print(f"Nota de matemáticas : {student["math_grade"]}")
+        print(f"Nombre : {student['name']}")
+        print(f"Sección : {student['section']}")
+        print(f"Nota de español : {student['spanish_grade']}")
+        print(f"Nota de inglés : {student['english_grade']}")
+        print(f"Nota de sociales : {student['social_grade']}")
+        print(f"Nota de ciencias : {student['science_grade']}")
+        print()
         print("==============================================")
 
 # Calculates the average grade of a single student.
 def calculate_average(student):
-    average = (student["spanish_grade"] + student["english_grade"] + student["social_grade"] + student["science_grade"] + student["math_grade"]) / 5
+    average = (student["spanish_grade"] + student["english_grade"] + student["social_grade"] + student["science_grade"]) / 4
         
     return average
 
