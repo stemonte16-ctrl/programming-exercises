@@ -195,8 +195,7 @@ def show_failed_students(students):
             "Español": "spanish_grade",
             "Inglés": "english_grade",
             "Sociales": "social_grade",
-            "Ciencias": "science_grade",
-            "Matemáticas": "math_grade"
+            "Ciencias": "science_grade"
         }
         for subject, grade_key in subjects.items():
             if student[grade_key] < 60:

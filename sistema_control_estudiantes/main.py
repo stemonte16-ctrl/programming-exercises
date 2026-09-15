@@ -1,3 +1,5 @@
-from sistema_control_estudiantes.menu import show_menu
+from menu import show_menu
 
-show_menu()
+student_list = []
+
+show_menu(student_list)

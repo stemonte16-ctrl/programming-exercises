@@ -1,6 +1,5 @@
 import csv
 
-student_list = []
 
 
 def export_students(file_path, students):

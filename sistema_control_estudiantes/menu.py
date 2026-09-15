@@ -1,6 +1,6 @@
-from sistema_control_estudiantes.actions import add_students,show_students,show_student_average,show_top_3,calculate_general_average,delete_student,show_failed_students
-from sistema_control_estudiantes.data import student_list,export_students,import_students
-def show_menu():
+from actions import add_students,show_students,show_student_average,show_top_3,calculate_general_average,delete_student,show_failed_students
+from data import export_students,import_students
+def show_menu(student_list):
     while True:
         
         print("===== SISTEMA DE ESTUDIANTES =====")
