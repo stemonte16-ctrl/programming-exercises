@@ -3,7 +3,8 @@
 class Employee:
     """class that represents an employee"""
     def __init__(self, name, salary):
-        """initializing the methods and attributes of the employee class"""
+        if salary < 0:
+            raise ValueError("The salary cannot be negative")
         self.__name = name
         self.__salary = salary
 
@@ -32,6 +33,6 @@ class Employee:
         self.__salary = final_salary
         return self.__salary
 
-employee = Employee("Ana", 1000)
+employee = Employee("Ana", -1000)
 print(employee.promote(0.10))
 print(employee.salary)
