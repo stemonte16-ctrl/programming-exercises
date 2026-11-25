@@ -2,9 +2,9 @@
 
 def repeat_twice(function):
     """Decorator to repeat two times"""
-    def wrapper(*args):
-        result = function(*args)
-        result_2 = function(*args)
+    def wrapper(*args, **kwargs):
+        result = function(*args, **kwargs)
+        result_2 = function(*args, **kwargs)
         return result, result_2
     return wrapper
 
@@ -15,3 +15,4 @@ def show_name(name):
     print(f"Hola, {name}")
 
 show_name("Steven")
+show_name(name="Nayu")
