@@ -7,6 +7,7 @@ def decorator(function):
         result = function(*args, **kwargs)
         print(*args)
         print(kwargs)
+        print(result)
         return result
     return wrapper
 
